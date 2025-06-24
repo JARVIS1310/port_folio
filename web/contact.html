@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0b0b0b;
+      font-family: 'Inter', sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 6vh;
+      font-weight: 700;
+      padding: 20px;
+      margin-top: 30px;
+      border: 3px solid #ffffff;
+      border-radius: 20px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 15px #ffffff50;
+      animation: fadeInDown 1s ease;
+    }
+
+    .contact-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 30px 50px;
+      flex-wrap: wrap;
+    }
+
+    .contact-form {
+      width: 45%;
+      min-width: 300px;
+      animation: slideInLeft 1.5s ease;
+      margin-top: 20px;
+      position: absolute;
+      left: 10%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      background-color: #1a1a1a;
+      color: white;
+      font-size: 1rem;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      box-shadow: 0 0 10px #facc15;
+    }
+
+    .contact-form button {
+      background-color: #facc15;
+      color: black;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #e0b914;
+    }
+
+    .linkedin-link {
+      margin-top: 25px;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .linkedin-link a {
+      color: #facc15;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .linkedin-link a:hover {
+      color: #fff176;
+    }
+
+    .linkedin-link i {
+      font-size: 1.5rem;
+    }
+
+    .contact-image {
+      width: 35%;
+      min-width: 260px;
+      animation: slideInRight 1.5s ease;
+      position: absolute;
+      left: 70%;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      position: absolute;
+      top: 5%;
+      left: 63%;
+      gap: 20px;
+    }
+
+    ul li {
+      font-size: 1.5rem;
+      font-weight: 500;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    .contact-image img {
+      width: 66%;
+      border-radius: 20px;
+      box-shadow: 0 0 25px #facc15;
+      transition: transform 0.4s ease;
+    }
+
+    .contact-image img:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 30px;
+      }
+
+      .contact-form,
+      .contact-image {
+        width: 90%;
+        margin-top: 0;
+      }
+
+      .linkedin-link {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Contact Me</h1>
+
+  <div class="contact-container">
+    <div class="contact-form">
+      <form action="https://formsubmit.co/kumarchoudharyharsh824@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://example.com/thankyou.html">
+
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="linkedin-link">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/harsh-kumar-choudhary-38a463298/" target="_blank">Connect on LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="home">
+      <ul>
+        <li><a href="portfolio.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="contact-image">
+      <img src="contactimage.png" alt="Answering Call Illustration" />
+    </div>
+  </div>
+
+</body>
+</html>

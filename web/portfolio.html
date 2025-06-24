@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HarshDev Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0b0b0b;
+            font-family: 'Inter', sans-serif;
+            color: white;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.85);
+            height: 10vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 40px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #facc15;
+        }
+
+        .logo {
+            position: absolute;
+            top: 18px;
+            left: 25px;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo-icon {
+            position: absolute;
+            top: 20px;
+            left: 200px;
+        }
+
+        .logo-icon svg {
+            fill: white;
+            width: 35px;
+            height: 35px;
+        }
+
+        .first {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 60px 0;
+            flex-wrap: wrap;
+        }
+
+        .first img {
+            width: 350px;
+            height: 550px;
+            border-radius: 40px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .text {
+            font-size: 8vh;
+            font-weight: 700;
+            position: absolute;
+            top: 25%;
+            left: 5%;
+            font-family: "Savate", sans-serif;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 4px solid white;
+            width: 0;
+            animation: typing 3s steps(26, end) infinite, blink 0.75s step-end infinite;
+            opacity: 0;
+            animation-delay: 0s, 0s;
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0;
+                opacity: 1;
+            }
+
+            40% {
+                width: 90%;
+                opacity: 1;
+            }
+
+            60% {
+                width: 90%;
+                opacity: 1;
+            }
+
+            100% {
+                width: 0;
+                opacity: 0;
+            }
+        }
+
+
+        .text1 {
+            font-size: 3vh;
+            font-weight: 500;
+            position: absolute;
+            top: 40%;
+            left: 11%;
+            letter-spacing: 2px;
+            width: 60%;
+            animation: fadeInUp 1.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .first {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .first img {
+                margin-top: 40px;
+                width: 250px;
+            }
+
+            .text,
+            .text1 {
+                font-size: 4vh;
+                padding: 10px;
+            }
+        }
+
+        .touch {
+            position: absolute;
+            top: 58%;
+            left: 11%;
+            border: 4px solid white;
+            color: black;
+            border-radius: 10px;
+            font-size: 4vh;
+            font-weight: bold;
+            width: 140px;
+            padding: 10px;
+        }
+
+        .touch:hover {
+            background-color: #facc15;
+            color: black;
+            transition: background-color 0.3s ease;
+        }
+
+        .touch a {
+            color: white;
+            text-decoration: none;
+
+        }
+
+        .contact {
+            position: absolute;
+            top: 58%;
+            left: 22%;
+            border: 4px solid white;
+            color: rgb(255, 255, 255);
+            border-radius: 10px;
+            font-size: 4vh;
+            font-weight: bold;
+            width: 210px;
+            padding: 10px;
+        }
+
+        .contact:hover {
+             background-color: #facc15;
+            color: black;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">HarshDev.io</div>
+            <div class="logo-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960">
+                    <path
+                        d="M480 576q-66 0-111-45t-45-111q0-66 45-111t111-45q66 0 111 45t45 111q0 66-45 111t-111 45Zm-300 240v-60q0-38 19-70.5t51-51.5q65-39 130-58t100-19q35 0 100 19t130 58q32 19 51 51.5t19 70.5v60H180Z" />
+                </svg>
+            </div>
+            <ul>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="certifications.html">CERTIFICATIONS</a></li>
+                <li><a href="project.html">PROJECTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="first">
+        <div>
+            <div class="text">👋 Hi, I'm HARSH KR. CHOUDHARY</div>
+            <div class="text1">💻 A passionate WEB DEVELOPER & lifelong learner 📚. I build clean ✨, user-friendly 🧑‍💻
+                websites that turn 💡 ideas into powerful digital experiences 🌐🚀.</div>
+        </div>
+        <img src="image.png" alt="Portfolio Image">
+
+        <div class="touch"><a href="certifications.html">Hire Me</a></div>
+        <div class="contact"><a href="contact.html">Get in Touch</a></div>
+    </section>
+
+</body>
+
+</html>
