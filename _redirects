@@ -1,0 +1,10 @@
+# Netlify redirects file
+/  /web/portfolio.html  200
+/home  /web/portfolio.html  200
+/about  /web/about.html  200
+/certifications  /web/certifications.html  200
+/projects  /web/project.html  200
+/contact  /web/contact.html  200
+
+# Handle 404s by redirecting to home
+/*  /web/portfolio.html  404

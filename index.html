@@ -3,14 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HarshDev Portfolio - Redirect</title>
-    <script>
-        // Redirect to the main portfolio page
-        window.location.href = './web/portfolio.html';
-    </script>
+    <title>HarshDev Portfolio</title>
+    <meta http-equiv="refresh" content="0; url=./web/portfolio.html">
+    <link rel="canonical" href="./web/portfolio.html">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b0b0b;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .redirect-message {
+            text-align: center;
+        }
+        a {
+            color: #facc15;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <p>Redirecting to portfolio...</p>
-    <p>If you're not redirected automatically, <a href="./web/portfolio.html">click here</a>.</p>
+    <div class="redirect-message">
+        <h1>Welcome to HarshDev Portfolio</h1>
+        <p>Redirecting to portfolio...</p>
+        <p>If you're not redirected automatically, <a href="./web/portfolio.html">click here</a>.</p>
+    </div>
+    <script>
+        // Fallback redirect
+        setTimeout(function() {
+            window.location.href = './web/portfolio.html';
+        }, 1000);
+    </script>
 </body>
 </html>

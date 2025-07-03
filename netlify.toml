@@ -1,0 +1,36 @@
+[build]
+  publish = "."
+  command = "echo 'Static site deployment'"
+
+[[redirects]]
+  from = "/"
+  to = "/web/portfolio.html"
+  status = 200
+
+[[redirects]]
+  from = "/home"
+  to = "/web/portfolio.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/web/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/certifications"
+  to = "/web/certifications.html"
+  status = 200
+
+[[redirects]]
+  from = "/projects"
+  to = "/web/project.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/web/contact.html"
+  status = 200
+
+[build.environment]
+  NODE_VERSION = "18"
