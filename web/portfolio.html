@@ -87,12 +87,9 @@
         }
 
         @keyframes float {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: translateY(0);
             }
-
             50% {
                 transform: translateY(-10px);
             }
@@ -119,23 +116,28 @@
                 width: 0;
                 opacity: 1;
             }
-
             40% {
                 width: 90%;
                 opacity: 1;
             }
-
             60% {
                 width: 90%;
                 opacity: 1;
             }
-
             100% {
                 width: 0;
                 opacity: 0;
             }
         }
 
+        @keyframes blink {
+            from, to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: white;
+            }
+        }
 
         .text1 {
             font-size: 3vh;
@@ -154,29 +156,9 @@
                 transform: translateY(30px);
                 opacity: 0;
             }
-
             to {
                 transform: translateY(0);
                 opacity: 1;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .first {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .first img {
-                margin-top: 40px;
-                width: 250px;
-            }
-
-            .text,
-            .text1 {
-                font-size: 4vh;
-                padding: 10px;
             }
         }
 
@@ -185,24 +167,25 @@
             top: 58%;
             left: 11%;
             border: 4px solid white;
-            color: black;
+            color: white;
+            background: transparent;
             border-radius: 10px;
             font-size: 4vh;
             font-weight: bold;
             width: 140px;
             padding: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
         }
 
         .touch:hover {
             background-color: #facc15;
             color: black;
-            transition: background-color 0.3s ease;
         }
 
         .touch a {
-            color: white;
+            color: inherit;
             text-decoration: none;
-
         }
 
         .contact {
@@ -210,29 +193,123 @@
             top: 58%;
             left: 22%;
             border: 4px solid white;
-            color: rgb(255, 255, 255);
+            color: white;
+            background: transparent;
             border-radius: 10px;
             font-size: 4vh;
             font-weight: bold;
             width: 210px;
             padding: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
         }
 
         .contact:hover {
-             background-color: #facc15;
+            background-color: #facc15;
             color: black;
-            transition: background-color 0.3s ease;
         }
 
         .contact a {
-            color: white;
+            color: inherit;
             text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .first {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .first img {
+                margin-top: 40px;
+                width: 250px;
+                height: auto;
+                position: relative;
+            }
+
+            .text {
+                position: relative;
+                font-size: 4vh;
+                padding: 10px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                text-align: center;
+                margin: 20px 0;
+            }
+
+            .text1 {
+                position: relative;
+                font-size: 2.5vh;
+                padding: 10px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                text-align: center;
+                margin: 20px 0;
+            }
+
+            .touch, .contact {
+                position: relative;
+                left: 0;
+                top: 0;
+                margin: 10px;
+                font-size: 3vh;
+                width: auto;
+                min-width: 120px;
+            }
+
+            nav {
+                padding: 0 20px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+
+            .logo {
+                font-size: 24px;
+                left: 15px;
+            }
+
+            .logo-icon {
+                left: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .text {
+                font-size: 3vh;
+            }
+
+            .text1 {
+                font-size: 2vh;
+            }
+
+            .touch, .contact {
+                font-size: 2.5vh;
+                padding: 8px;
+            }
+
+            nav ul {
+                gap: 10px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 
 <body>
-
     <header>
         <nav>
             <div class="logo">HarshDev.io</div>
@@ -257,12 +334,11 @@
             <div class="text1">💻 A passionate WEB DEVELOPER & lifelong learner 📚. I build clean ✨, user-friendly 🧑‍💻
                 websites that turn 💡 ideas into powerful digital experiences 🌐🚀.</div>
         </div>
-        <img src="image.png" alt="Portfolio Image">
+        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=350&h=550&fit=crop" alt="Portfolio Image" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUwIiBoZWlnaHQ9IjU1MCIgdmlld0JveD0iMCAwIDM1MCA1NTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzNTAiIGhlaWdodD0iNTUwIiBmaWxsPSIjMUExQTFBIi8+Cjx0ZXh0IHg9IjE3NSIgeT0iMjc1IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4Ij5Qb3J0Zm9saW8gSW1hZ2U8L3RleHQ+Cjwvc3ZnPg=='">
 
         <div class="touch"><a href="certifications.html">Hire Me</a></div>
         <div class="contact"><a href="contact.html">Get in Touch</a></div>
     </section>
-
 </body>
 
 </html>

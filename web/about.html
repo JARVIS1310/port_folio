@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me</title>
+  <title>About Me - HarshDev Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -33,7 +33,7 @@
       animation: glowFadeIn 2s ease-in-out;
     }
 
-    img {
+    .profile-img {
       width: 420px;
       height: 630px;
       position: absolute;
@@ -43,9 +43,10 @@
       box-shadow: 0 0 20px #facc15;
       transition: transform 0.6s ease, box-shadow 0.6s ease;
       animation: floatInLeft 1.5s ease forwards;
+      object-fit: cover;
     }
 
-    img:hover {
+    .profile-img:hover {
       transform: scale(1.05);
       box-shadow: 0 0 40px #facc15;
     }
@@ -76,7 +77,32 @@
       left: 38%;
       animation: fadeInRight 2s ease forwards;
       animation-delay: 1.5s;
-      
+    }
+
+    .home ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        position: absolute;
+        top: 5%;
+        left: 62%;
+        gap: 22px;
+    }
+
+    .home ul li {
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .home ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        transition: color 0.3s ease;
+    }
+
+    .home ul li a:hover {
+        color: #facc15;
     }
 
     /* Animations */
@@ -114,7 +140,7 @@
     }
 
     @media screen and (max-width: 900px) {
-      img {
+      .profile-img {
         width: 250px;
         height: auto;
         position: relative;
@@ -133,31 +159,19 @@
         top: unset;
         animation: fadeInRight 2s ease forwards;
       }
-    }
 
-    
-     
-     
-    ul{
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        position: absolute;
-        top: 5%;
-        left: 62%;
-        gap: 22px;
-    }
+      .home ul {
+        position: relative;
+        top: unset;
+        left: unset;
+        margin: 20px 0;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
 
-    ul li {
-        font-size: 1.5rem;
-        font-weight: 500;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-
-    ul li a {
-        text-decoration: none;
-        color: #ffffff;
-        transition: color 0.3s ease;
+      .home ul li {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
@@ -165,7 +179,7 @@
 
   <h1>About Me</h1>
 
-  <img src="image1.png" alt="Animated Portrait"/>
+  <img class="profile-img" src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=420&h=630&fit=crop" alt="Animated Portrait" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIwIiBoZWlnaHQ9IjYzMCIgdmlld0JveD0iMCAwIDQyMCA2MzAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MjAiIGhlaWdodD0iNjMwIiBmaWxsPSIjMUExQTFBIi8+Cjx0ZXh0IHg9IjIxMCIgeT0iMzE1IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4Ij5Qcm9maWxlIEltYWdlPC90ZXh0Pgo8L3N2Zz4='"/>
 
   <div class="text">
     <p>I'm not just a web developer — I'm a digital problem solver. Whether it's building responsive layouts, optimizing performance, or creating smooth user experiences, I thrive on turning complex challenges into clean, elegant code. Every line I write serves a purpose: to bring ideas to life and make technology more human.</p>
